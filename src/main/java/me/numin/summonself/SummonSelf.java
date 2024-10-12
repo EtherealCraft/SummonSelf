@@ -157,9 +157,9 @@ public class SummonSelf extends AirAbility implements AddonAbility, ComboAbility
         Location newStandLoc = location.add(direction.multiply(speed));
         armorStand.teleport(newStandLoc);
 
-        player.getWorld().spawnParticle(Particle.SPELL, armorStand.getLocation().add(0, 0.4, 0), 10, 0.07, 0.9, 0.07, 0);
-        player.getWorld().spawnParticle(Particle.SPELL, armorStand.getLocation().add(0, 0.5, 0), 10, 0.7, 0.1, 0.7, 0);
-        player.getWorld().spawnParticle(Particle.SPELL, armorStand.getLocation().add(0, 2, 0), 10, 0.3, 0.3, 0.3, 0);
+        player.getWorld().spawnParticle(Particle.EFFECT, armorStand.getLocation().add(0, 0.4, 0), 10, 0.07, 0.9, 0.07, 0);
+        player.getWorld().spawnParticle(Particle.EFFECT, armorStand.getLocation().add(0, 0.5, 0), 10, 0.7, 0.1, 0.7, 0);
+        player.getWorld().spawnParticle(Particle.EFFECT, armorStand.getLocation().add(0, 2, 0), 10, 0.3, 0.3, 0.3, 0);
         player.getWorld().spawnParticle(Particle.CLOUD, armorStand.getLocation().add(0, 1, 0), 1, 1, 1, 1, 0);
     }
 
