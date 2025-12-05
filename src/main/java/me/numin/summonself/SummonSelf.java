@@ -13,10 +13,7 @@ import com.projectkorra.projectkorra.configuration.ConfigManager;
 import com.projectkorra.projectkorra.firebending.FireShield;
 import com.projectkorra.projectkorra.util.ClickType;
 import com.projectkorra.projectkorra.util.DamageHandler;
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.Particle;
-import org.bukkit.World;
+import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;
@@ -157,9 +154,9 @@ public class SummonSelf extends AirAbility implements AddonAbility, ComboAbility
         Location newStandLoc = location.add(direction.multiply(speed));
         armorStand.teleport(newStandLoc);
 
-        player.getWorld().spawnParticle(Particle.EFFECT, armorStand.getLocation().add(0, 0.4, 0), 10, 0.07, 0.9, 0.07, 0);
-        player.getWorld().spawnParticle(Particle.EFFECT, armorStand.getLocation().add(0, 0.5, 0), 10, 0.7, 0.1, 0.7, 0);
-        player.getWorld().spawnParticle(Particle.EFFECT, armorStand.getLocation().add(0, 2, 0), 10, 0.3, 0.3, 0.3, 0);
+        player.getWorld().spawnParticle(Particle.EFFECT, armorStand.getLocation().add(0, 0.4, 0), 10, 0.07, 0.9, 0.07, 0, new Particle.Spell(Color.WHITE, 1), true);
+        player.getWorld().spawnParticle(Particle.EFFECT, armorStand.getLocation().add(0, 0.5, 0), 10, 0.7, 0.1, 0.7, 0, new Particle.Spell(Color.WHITE, 1), true);
+        player.getWorld().spawnParticle(Particle.EFFECT, armorStand.getLocation().add(0, 2, 0), 10, 0.3, 0.3, 0.3, 0, new Particle.Spell(Color.WHITE, 1), true);
         player.getWorld().spawnParticle(Particle.CLOUD, armorStand.getLocation().add(0, 1, 0), 1, 1, 1, 1, 0);
     }
 
